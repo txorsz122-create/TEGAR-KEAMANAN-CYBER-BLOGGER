@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Keamanan Cyber - Blog</title>
+  <style>
+    :root{
+      --bg:#0b0f14; --card:#0f1720; --accent:#00e676; --muted:#9aa5b1; --glass: rgba(255,255,255,0.03);
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#061018 0%, #07121a 100%);color:#e6eef7}
+    header{display:flex;align-items:center;justify-content:space-between;padding:20px 36px;background:transparent}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#00ffa3);display:flex;align-items:center;justify-content:center;font-weight:700;color:#042028}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:48px 36px}
+    .hero .lead{max-width:720px}
+    h1{font-size:40px;line-height:1.05;margin:0 0 12px}
+    p.lead{color:var(--muted);margin:0 0 20px}
+    .cta{display:flex;gap:12px}
+    .btn{padding:10px 16px;border-radius:10px;background:var(--accent);color:#031318;font-weight:600;border:none;cursor:pointer}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent)}
+
+    .card{background:var(--card);border-radius:14px;padding:16px;box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+
+    .hero-img{border-radius:12px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,0.5)}
+    .hero-img img{display:block;width:100%;height:100%;object-fit:cover}
+
+    main{padding:28px 36px;display:grid;grid-template-columns:1fr 320px;gap:28px}
+    article{background:var(--glass);padding:18px;border-radius:12px}
+    article h2{margin:0 0 10px;color:var(--accent)}
+    .post-excerpt{color:var(--muted);line-height:1.6}
+
+    aside .widget{margin-bottom:18px}
+    footer{text-align:center;padding:24px;color:var(--muted)}
+
+    /* Komentar */
+    .comment-box h3{margin-bottom:14px;color:var(--accent)}
+    .form-input, textarea{
+      width:100%;padding:12px;margin-bottom:12px;
+      border-radius:8px;border:1px solid #222c36;
+      background:#0b121a;color:#e6eef7;font-size:14px;
+    }
+    .form-input:focus, textarea:focus{outline:2px solid var(--accent);border-color:var(--accent)}
+    .btn-submit{
+      background:var(--accent);color:#031318;font-weight:600;
+      padding:12px 16px;border:none;border-radius:8px;width:100%;cursor:pointer;transition:0.2s
+    }
+    .btn-submit:hover{background:#00c765}
+    .comment-list{margin-top:16px;display:flex;flex-direction:column;gap:12px}
+    .comment-item{
+      background:#0c141c;border:1px solid #1f2a33;padding:12px 14px;
+      border-radius:10px;line-height:1.5;font-size:14px;
+    }
+    .comment-item strong{color:var(--accent);display:block;margin-bottom:4px;font-size:13px}
+    .comment-item p{margin:0;color:#d0d7df;white-space:pre-line}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;padding:28px}
+      main{grid-template-columns:1fr}
+      nav{display:none}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">CY</div>
+      <div>
+        <div style="font-weight:700">Keamanan Cyber</div>
+        <div style="font-size:12px;color:var(--muted)">Tips, berita, dan panduan</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#">Beranda</a>
+      <a href="#">Artikel</a>
+      <a href="#">Tutorial</a>
+      <a href="#">Tentang</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="lead">
+      <h1>Pelajari & Lindungi: Dunia Keamanan Cyber</h1>
+      <p class="lead">Panduan praktis tentang privasi, enkripsi, keamanan jaringan, dan cara melindungi data pribadi Anda dari ancaman digital. Cocok untuk pemula hingga profesional.</p>
+      <div class="cta">
+        <button class="btn">Baca Artikel Terbaru</button>
+        <button class="btn ghost">Langganan Newsletter</button>
+      </div>
+      <div style="margin-top:18px;color:var(--muted);font-size:13px">Kategori populer: <strong style="color:var(--accent)">Privasi</strong>, <strong style="color:var(--accent)">VPN</strong>, <strong style="color:var(--accent)">Forensik</strong></div>
+    </div>
+
+    <div class="hero-img card">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="Foto komputer" />
+    </div>
+  </section>
+
+  <section style="padding:28px 36px">
+    <h2 class="section-title">Artikel Terbaru</h2>
+    
+    <div class="card">
+      <h2>5 Cara Dasar Mengamankan Akun Online</h2>
+      <p>Gunakan autentikasi dua faktor, kata sandi kuat, dan perbarui aplikasi Anda secara berkala.</p>
+    </div>
+
+    <div class="card">
+      <h2>Mengenal VPN & Enkripsi</h2>
+      <p>VPN membantu melindungi privasi Anda. Pelajari bagaimana enkripsi bekerja untuk menjaga data tetap aman.</p>
+    </div>
+
+    <!-- Komentar -->
+    <div class="card comment-box">
+      <h3>Tinggalkan Komentar (disimpan lokal di browser Anda)</h3>
+      <input type="text" id="nama" class="form-input" placeholder="Nama Anda">
+      <textarea id="komentar" class="form-input" placeholder="Tulis komentar..."></textarea>
+      <button class="btn-submit" onclick="kirimKomentar()">Kirim</button>
+
+      <div class="comment-list" id="commentList"></div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Blog Keamanan Cyber | Dibuat untuk edukasi
+  </footer>
+
+  <script>
+    let komentarData = JSON.parse(localStorage.getItem("komentarData")) || [];
+
+    function renderKomentar() {
+      const commentList = document.getElementById("commentList");
+      commentList.innerHTML = "";
+
+      if (komentarData.length === 0) {
+        commentList.innerHTML = '<p style="color: #8b949e; text-align: center; padding: 10px;">Belum ada komentar.</p>';
+        return;
+      }
+
+      komentarData.slice().reverse().forEach(k => {
+        const div = document.createElement("div");
+        div.classList.add("comment-item");
+        div.innerHTML = "<strong>" + k.nama + "</strong><p>" + k.teks.replace(/\n/g,"<br>") + "</p>";
+        commentList.appendChild(div);
+      });
+    }
+
+    function kirimKomentar() {
+      const namaInput = document.getElementById("nama");
+      const komentarInput = document.getElementById("komentar");
+
+      const nama = namaInput.value.trim();
+      const teks = komentarInput.value.trim();
+
+      if (nama && teks) {
+        komentarData.push({ nama, teks });
+        localStorage.setItem("komentarData", JSON.stringify(komentarData));
+
+        renderKomentar();
+
+        namaInput.value = "";
+        komentarInput.value = "";
+      } else {
+        alert("Isi nama dan komentar dulu!");
+      }
+    }
+
+    window.onload = renderKomentar;
+  </script>
+</body>
+</html>
